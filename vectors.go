@@ -176,7 +176,7 @@ func (v *Vector) Equal(w *Vector) bool {
 func (v *Vector) MatrixMultiply(a *Matrix) {
 	v_original := v.Copy()
 	for i := 0; i < len(*v); i++ {
-		(*v)[i] = DotProduct(a.GetColumn(i), v_original)
+		(*v)[i] = DotProduct(a.GetRow(i), v_original)
 	}
 }
 
